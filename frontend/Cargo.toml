@@ -1,0 +1,28 @@
+[package]
+name = "todo-frontend"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+description = "WebAssembly frontend for the Todo List application"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+# Yew framework
+yew = { version = "0.20", features = ["csr"] }
+yew-router = "0.17"
+wasm-bindgen = "0.2"
+wasm-bindgen-futures = "0.4"
+web-sys = { version = "0.3", features = [
+    "Document",
+    "Element",
+    "HtmlInputElement",
+    "Window",
+] }
+serde = { workspace = true }
+serde_json = { workspace = true }
+
+# Local workspace crates
+todo-shared = { path = "../shared" }
