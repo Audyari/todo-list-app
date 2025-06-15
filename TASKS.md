@@ -25,6 +25,13 @@ A simple command-line todo list application built with Rust.
    - [x] Create database migrations
    - [x] Set up connection pooling
 
+   Node : D:\Linkedin Update\todo-list-app\api>cargo run --bin todo-api
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.67s
+     Running `D:\Linkedin Update\todo-list-app\target\debug\todo-api.exe`
+   ✅ Berhasil terhubung ke MySQL versi: 10.4.32-MariaDB
+
+
+
 3. **API Endpoints**
    - [ ] `GET /api/tasks` - List all tasks
    - [ ] `POST /api/tasks` - Create new task
