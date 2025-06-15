@@ -19,25 +19,26 @@ TaskFlow is a simple and intuitive todo manager built with Vue.js, designed to h
 - [x] Navigate to project directory: `cd taskflow`
 - [x] Install project dependencies: `npm install`
 - [x] Verify installation: `npm run dev`
-- [ ] Initialize git repository: `git init`
-- [ ] Create .gitignore file with common exclusions
+- [x] Initialize git repository: `git init`
+- [x] Create .gitignore file with common exclusions
 
 #### 2. Set Up Tailwind CSS
-- [ ] Install Tailwind CSS and its peer dependencies:
+- [x] Install Tailwind CSS and its peer dependencies:
   ```bash
-  npm install -D tailwindcss postcss autoprefixer
+  npm install -D tailwindcss postcss autoprefixer @tailwindcss/postcss7-compat
   npx tailwindcss init -p
   ```
-- [ ] Configure `tailwind.config.js`:
-  - Add paths to all template files
-  - Configure theme extensions if needed
-- [ ] Update `src/assets/main.css` to include Tailwind directives:
+- [x] Configure `tailwind.config.cjs`:
+  - Added paths to all template files
+  - Configured theme extensions if needed
+- [x] Update `postcss.config.cjs` to use `@tailwindcss/postcss7-compat`
+- [x] Update `src/assets/main.css` to include Tailwind directives:
   ```css
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
   ```
-- [ ] Verify Tailwind CSS is working by adding test classes to App.vue
+- [x] Verify Tailwind CSS is working by adding test classes to App.vue
 
 #### 3. Configure ESLint and Prettier
 - [ ] Install required packages:
