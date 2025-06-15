@@ -1,92 +1,45 @@
-# Todo List App
+# Full-Stack Todo List App
 
-A simple command-line todo list application built with Rust.
+A full-stack todo list application built with:
+- **Backend**: Rust + Axum + SQLx
+- **Frontend**: WebAssembly + Yew (Coming Soon)
+- **Database**: MySQL (via XAMPP)
 
 ## Features
 
+### Backend (Rust)
+- [x] RESTful API with Axum
+- [x] MySQL database integration with SQLx
+- [x] Database migrations
+- [x] CRUD operations for tasks
+- [x] Error handling and validation
+
+### Frontend (Coming Soon)
+- [ ] WebAssembly frontend with Yew
+- [ ] Task listing and management
+- [ ] Real-time updates
+
+### CLI (Existing)
 - [x] Add new tasks
 - [x] List all tasks
 - [x] Mark tasks as complete
 - [x] Delete tasks
-- [x] Persistent storage (saves to JSON file)
-- [x] Comprehensive unit tests
-- [x] Flowchart documentation
+- [x] Persistent storage (JSON)
 
 ## Prerequisites
 
-- Rust (latest stable version recommended)
+- Rust (latest stable version)
 - Cargo (Rust's package manager)
+- XAMPP (for MySQL)
+- Node.js & npm (for frontend, coming soon)
 
-## Installation
+## Getting Started
 
-1. Clone the repository:
+### Backend Setup
+
+1. Start XAMPP and ensure MySQL is running
+2. Create a database named `todo_app` in phpMyAdmin
+3. Clone the repository:
    ```bash
    git clone <repository-url>
    cd todo-list-app
-   ```
-
-2. Build the project:
-   ```bash
-   cargo build --release
-   ```
-
-## Usage
-
-### Add a new task
-```bash
-cargo run -- add "Your task description here"
-```
-
-### List all tasks
-```bash
-cargo run -- list
-```
-
-### Mark a task as complete
-```bash
-cargo run -- complete <task_id>
-```
-
-### Delete a task
-```bash
-cargo run -- delete <task_id>
-```
-
-## Running Tests
-
-To run the test suite:
-
-```bash
-cargo test
-```
-
-This will execute all unit tests with test coverage for core functionality.
-
-## Project Structure
-
-- `src/main.rs` - Main application code
-- `tests/` - Unit tests (in main.rs with `#[cfg(test)]`)
-- `docs/flowchart.puml` - PlantUML flowchart of application logic
-- `Cargo.toml` - Project configuration and dependencies
-
-## Data Storage
-
-Tasks are automatically saved to a JSON file in your system's application data directory:
-- Windows: `%APPDATA%\todo-list-app\tasks.json`
-- macOS: `~/Library/Application Support/todo-list-app/tasks.json`
-- Linux: `~/.local/share/todo-list-app/tasks.json`
-
-## Development
-
-### Adding New Features
-
-1. Create a new branch for your feature
-2. Add tests for the new functionality
-3. Implement the feature
-4. Run tests: `cargo test`
-5. Update documentation as needed
-6. Submit a pull request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
