@@ -1,10 +1,14 @@
 # Exclude TASKS.md
 TASKS.md
 
-# Rust
+# Rust build artifacts
 /target/
 **/*.rs.bk
 Cargo.lock
+
+# Debug builds
+**/debug/
+!/target/debug/.gitkeep
 
 # Environment variables
 .env
